@@ -1,0 +1,1 @@
+--loc=lib --loc=themes/miloshadzic --btype=theme git git-flow python pip virtualenv zsh-users/zsh-syntax-highlighting
