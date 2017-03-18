@@ -11,8 +11,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-# Gives vi bindings to terminal
-bindkey -v
 
 # For autocompletion with an arrow-key driven interface
 # To activate the menu, press tab twice.
@@ -58,3 +56,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # End of antigen
 antigen apply
+
+
+# Gives vi bindings to terminal
+bindkey -v
