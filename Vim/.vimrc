@@ -11,11 +11,14 @@ call vundle#begin()
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Some basic settings everyone should have
 Plugin 'tpope/vim-sensible'
 
 " Handle surround character, i.e. ''
-" cs '"
+" example: cs '"
 Plugin 'tpope/vim-surround'
+" Following plugin allows you to use '.' with surround
+Plugin 'tpope/vim-repeat'
 
 " Fuzzy Finder for dir
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -37,11 +40,6 @@ Plugin 'airblade/vim-gitgutter'
 " Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'dhruvasagar/vim-table-mode'
 
-" Autoclose (, " etc, though nice, it has a bug that
-" does not allow escape to work on install press.
-" Plugin 'somini/vim-autoclose'
-
-
 " UNIX shell command helpers, e.g. sudo, chmod, remove etc.
 Plugin 'tpope/vim-eunuch'
 
@@ -56,9 +54,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 
 " Super easy commenting, toggle comments etc
+" example: <leader> cc to comment or <leader> cu to uncomment
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'tomtom/tcomment_vim'
-"
+
 " Lint Checker
 Plugin 'scrooloose/syntastic'
 
@@ -90,6 +88,7 @@ filetype plugin indent on
 " let g:indent_guides_color_change_percent = 3
 "let g:indent_guides_enable_on_vim_startup = 1
 
+" I am not satisfied with the lint settings yet.
 " lint checker settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -122,6 +121,8 @@ set ruler
 set visualbell
 
 " Cursor motion
+" I need to check if I still need this because of
+" vim-sensible
 set scrolloff=3
 set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
@@ -187,6 +188,7 @@ map <leader>l :set list!<CR>
 
 
 " Color scheme (terminal)
+" Not sure if I like this one. 
 set cursorline
 hi CursorLine term=bold cterm=bold guibg=Grey40
 set t_Co=256
